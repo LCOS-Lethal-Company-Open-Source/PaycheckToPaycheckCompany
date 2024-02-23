@@ -9,6 +9,10 @@
     <LangVersion>latest</LangVersion>
   </PropertyGroup>
 
+  <PropertyGroup>
+    <DefaultItemExcludes>$(DefaultItemExcludes);LCOS-Postbuild/**</DefaultItemExcludes>
+  </PropertyGroup>
+
   <ItemGroup>
     <PackageReference Include="BepInEx.Analyzers" Version="1.*" PrivateAssets="all" />
     <PackageReference Include="BepInEx.Core" Version="5.*" />
@@ -33,6 +37,6 @@
   </ItemGroup>
 
   <Target Name="PostBuild" AfterTargets="PostBuildEvent">
-    <Exec Command="dotnet run --project ../Postbuild -- --dev $(TargetDir) $(ProjectDir) --run" />
+    <Exec Command="dotnet run --project ./LCOS-Postbuild -- --dev $(TargetDir) $(ProjectDir) --run" />
   </Target>
 </Project>

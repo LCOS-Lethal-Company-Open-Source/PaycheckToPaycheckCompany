@@ -1,4 +1,5 @@
-# Template Mod
+# PaycheckToPaycheckCompany
 
-Put your description here!
+Smaller Quotas, less time. Mod created by Jackson Baimel within RCOS
+
 Default icon by @lilujk on github.

@@ -1,6 +1,6 @@
 {
     "name": "PaycheckToPaycheckCompany",
-    "version_number": "0.0.1",
+    "version_number": "0.0.2",
     "website_url": "https://github.com/LCOS-Lethal-Company-Open-Source/PaycheckToPaycheckCompany",
     "description": "Smaller Quotas, less time. Mod created by Jackson Baimel within RCOS",
     "dependencies": [

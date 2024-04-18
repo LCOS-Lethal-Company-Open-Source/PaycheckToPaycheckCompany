@@ -27,12 +27,14 @@ public class Plugin : BaseUnityPlugin
         //Something to note is that there is only one TimeOfDay object - it's not like an enemy where there's many
         private static void Postfix(ref TimeOfDay __instance)
         {
+          if(GameNetworkManager.Instance.isHostingGame){ // Only runs if the user running the mod is the host
             //Modifies a variety of relevant variables within the TimeOfDay instance
             __instance.quotaVariables.startingCredits = 30;
             __instance.quotaVariables.startingQuota = 100;
             __instance.quotaVariables.deadlineDaysAmount = 2;
             __instance.quotaVariables.increaseSteepness = 5f;
             __instance.quotaVariables.baseIncrease = 100;
+          }
         }  
     }
 }
